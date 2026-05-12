@@ -32,9 +32,15 @@
       return;
     }
 
+    var isServicePage = window.location.pathname.includes('/services/');
+
     navList.innerHTML = config.navigation
       .map(function (item) {
-        return '<li><a href="' + item.href + '">' + item.label + "</a></li>";
+        var href = item.href;
+        if (isServicePage && href.charAt(0) === '#') {
+          href = '../index.html' + href;
+        }
+        return '<li><a href="' + href + '">' + item.label + "</a></li>";
       })
       .join("");
   }
@@ -47,7 +53,11 @@
 
     container.innerHTML = config.services
       .map(function (service) {
+        var href = service.href || "#hero-form";
         return (
+          '<a class="service-card-link" href="' +
+          href +
+          '">' +
           '<article class="info-card">' +
           "<h3>" +
           service.title +
@@ -55,7 +65,8 @@
           "<p>" +
           service.description +
           "</p>" +
-          "</article>"
+          "</article>" +
+          "</a>"
         );
       })
       .join("");
@@ -111,9 +122,17 @@
       return;
     }
 
+    function slugifyCity(city) {
+      return city
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
     container.innerHTML = config.serviceArea.cities
       .map(function (city) {
-        return '<li class="city-chip">' + city + "</li>";
+        var slug = slugifyCity(city);
+        return '<li class="city-chip"><a href="' + slug + '/">' + city + "</a></li>";
       })
       .join("");
   }

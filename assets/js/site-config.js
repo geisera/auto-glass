@@ -12,7 +12,7 @@ window.SITE_CONFIG = {
     phoneRaw: "17175084842",
     email: "service@keystoneautoglass.com",
     hours: "Mon - Sat, 7 AM - 6 PM",
-    responsePromise: "Usually same-day response"
+    responsePromise: "We're on it."
   },
   ctas: {
     primary: "Get A Free Quote",
@@ -28,31 +28,37 @@ window.SITE_CONFIG = {
   services: [
     {
       title: "Windshield Replacement",
+      href: "services/windshield-replacement.html",
       description:
         "OEM-quality replacement with careful calibration checks so your safety systems keep working the way they should."
     },
     {
       title: "Chip And Crack Repair",
+      href: "services/chip-and-crack-repair.html",
       description:
         "Fast resin repair for minor damage before it spreads, helping you avoid a full replacement when possible."
     },
     {
       title: "Side And Rear Glass",
+      href: "services/side-and-rear-glass.html",
       description:
         "Door glass, quarter glass, and rear windshield replacement for damage from theft, storms, or road debris."
     },
     {
       title: "ADAS Calibration Support",
+      href: "services/adas-calibration-support.html",
       description:
         "Guidance and post-install process support for camera-based systems affected by windshield replacement."
     },
     {
       title: "Mobile Service",
+      href: "services/mobile-service.html",
       description:
         "Home, office, or fleet location appointments across South Central Pennsylvania for minimal downtime."
     },
     {
       title: "Insurance Claim Help",
+      href: "services/insurance-claim-help.html",
       description:
         "Straightforward claim assistance and documentation to keep the process clean and stress-free."
     }

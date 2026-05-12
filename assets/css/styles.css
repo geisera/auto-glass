@@ -147,6 +147,28 @@ a {
   padding: 2rem 0 1.4rem;
 }
 
+.city-banner {
+  padding: 1rem 0 0;
+}
+
+.city-banner-inner {
+  background: linear-gradient(120deg, rgba(17, 17, 17, 0.94), rgba(17, 17, 17, 0.78));
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius);
+  color: #f4f4ef;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.7rem;
+  padding: 0.9rem 1rem;
+}
+
+.city-banner-inner p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
 .hero-grid {
   display: grid;
   gap: 1.2rem;
@@ -168,6 +190,10 @@ a {
   font-weight: 700;
   color: #4a4a4a;
   margin: 0 0 0.5rem;
+}
+
+.eyebrow-accent {
+  color: var(--accent);
 }
 
 h1,
@@ -279,6 +305,10 @@ h3 {
   gap: 0.85rem;
 }
 
+.card-grid--single-column {
+  grid-template-columns: 1fr !important;
+}
+
 .info-card,
 .reason-card,
 .value-card,
@@ -289,6 +319,23 @@ h3 {
   padding: 1rem;
 }
 
+.service-card-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.service-card-link .info-card {
+  height: 100%;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.service-card-link:hover .info-card,
+.service-card-link:focus-visible .info-card {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.14);
+}
+
 .section-contrast .reason-card {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(255, 255, 255, 0.2);
@@ -297,6 +344,10 @@ h3 {
 .value-layout {
   display: grid;
   gap: 1rem;
+}
+
+.value-layout--single-column {
+  grid-template-columns: 1fr !important;
 }
 
 .city-list {
@@ -315,6 +366,12 @@ h3 {
   text-align: center;
   padding: 0.35rem 0.7rem;
   font-size: 0.92rem;
+}
+
+.city-chip a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
 }
 
 .faq-group details {
