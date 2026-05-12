@@ -178,9 +178,30 @@
       return;
     }
 
+    function getRelativePrefixToRoot() {
+      var path = (window.location.pathname || "").replace(/\\/g, "/");
+      var segments = path.split("/").filter(Boolean);
+
+      if (segments.length && /\.html?$/i.test(segments[segments.length - 1])) {
+        segments.pop();
+      }
+
+      return segments.length ? "../".repeat(segments.length) : "";
+    }
+
+    function resolveFooterHref(href, prefix) {
+      if (!href || /^(?:[a-z]+:|#|\/)/i.test(href)) {
+        return href;
+      }
+      return prefix + href;
+    }
+
+    var prefix = getRelativePrefixToRoot();
+
     container.innerHTML = config.footerLinks
       .map(function (item) {
-        return '<li><a href="' + item.href + '">' + item.label + "</a></li>";
+        var href = resolveFooterHref(item.href, prefix);
+        return '<li><a href="' + href + '">' + item.label + "</a></li>";
       })
       .join("");
   }
