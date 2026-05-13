@@ -231,7 +231,22 @@
       .join("");
   }
 
+  function ensureFavicon() {
+    var existingIcon = document.querySelector('link[rel~="icon"]');
+    if (existingIcon) {
+      return;
+    }
+
+    var iconLink = document.createElement("link");
+    iconLink.setAttribute("rel", "icon");
+    iconLink.setAttribute("type", "image/png");
+    iconLink.setAttribute("href", getRelativePrefixToRoot() + "assets/favicon.ico");
+    document.head.appendChild(iconLink);
+  }
+
   function applyMeta() {
+    ensureFavicon();
+
     var phoneLinkNodes = document.querySelectorAll("[data-phone-link]");
     phoneLinkNodes.forEach(function (node) {
       node.setAttribute("href", "tel:" + (config.contact ? config.contact.phoneRaw : ""));

@@ -29,13 +29,173 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "AutoRepair",
-        "name": "Keystone Auto Glass",
-        "areaServed": "South Central Pennsylvania",
-        "telephone": "+17175084842",
-        "email": "service@keystoneautoglass.com",
-        "url": "https://keystoneautoglass.com",
-        "openingHours": "Mo-Sa 07:00-18:00"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://keystoneautoglass.com/#website",
+            "url": "https://keystoneautoglass.com/",
+            "name": "Keystone Auto Glass",
+            "description": "Keystone Auto Glass provides windshield replacement, chip repair, and mobile auto glass service across South Central Pennsylvania."
+          },
+          {
+            "@type": "AutoRepair",
+            "@id": "https://keystoneautoglass.com/#business",
+            "url": "https://keystoneautoglass.com/",
+            "name": "Keystone Auto Glass",
+            "description": "Windshield replacement, chip repair, side and rear glass replacement, ADAS calibration support, and mobile auto glass service across South Central Pennsylvania.",
+            "telephone": "+17175084842",
+            "email": "service@keystoneautoglass.com",
+            "areaServed": [
+              "South Central Pennsylvania",
+              "Harrisburg",
+              "Mechanicsburg",
+              "Camp Hill",
+              "Carlisle",
+              "York",
+              "Lancaster",
+              "Lebanon",
+              "Gettysburg",
+              "Hanover",
+              "Hershey"
+            ],
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "07:00",
+                "closes": "18:00"
+              }
+            ],
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+17175084842",
+              "contactType": "customer service",
+              "areaServed": "US-PA",
+              "availableLanguage": "en"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Auto Glass Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Windshield Replacement",
+                    "url": "https://keystoneautoglass.com/services/windshield-replacement.html",
+                    "description": "OEM-quality replacement with careful calibration checks so your safety systems keep working the way they should."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Chip And Crack Repair",
+                    "url": "https://keystoneautoglass.com/services/chip-and-crack-repair.html",
+                    "description": "Fast resin repair for minor damage before it spreads, helping you avoid a full replacement when possible."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Side And Rear Glass",
+                    "url": "https://keystoneautoglass.com/services/side-and-rear-glass.html",
+                    "description": "Door glass, quarter glass, and rear windshield replacement for damage from theft, storms, or road debris."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "ADAS Calibration Support",
+                    "url": "https://keystoneautoglass.com/services/adas-calibration-support.html",
+                    "description": "Guidance and post-install process support for camera-based systems affected by windshield replacement."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Mobile Service",
+                    "url": "https://keystoneautoglass.com/services/mobile-service.html",
+                    "description": "Home, office, or fleet location appointments across South Central Pennsylvania for minimal downtime."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Insurance Claim Help",
+                    "url": "https://keystoneautoglass.com/services/insurance-claim-help.html",
+                    "description": "Straightforward claim assistance and documentation to keep the process clean and stress-free."
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://keystoneautoglass.com/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Will my insurance cover windshield replacement?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Many comprehensive policies do. We help you understand options and provide claim-ready documentation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does auto glass replacement usually cost?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Price depends on vehicle, glass type, and calibration needs. Request a quote for exact pricing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does a windshield replacement take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Most jobs are completed the same visit, plus safe-drive-away adhesive cure time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I drive right after service?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We provide a clear safe-drive-away window based on adhesive and weather conditions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you come to my home or work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, mobile service is available across our South Central Pennsylvania coverage area."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can weather affect mobile appointments?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Heavy rain or extreme conditions may require rescheduling to protect installation quality."
+                }
+              }
+            ]
+          }
+        ]
       }
     </script>
   </head>
