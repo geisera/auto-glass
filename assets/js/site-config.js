@@ -23,6 +23,7 @@ window.SITE_CONFIG = {
     { label: "Why Us", href: "#why-us" },
     { label: "Service Area", href: "#service-area" },
     { label: "FAQ", href: "#faq" },
+    { label: "Resources", href: "resources.html" },
     { label: "Contact", href: "#hero-form" }
   ],
   services: [

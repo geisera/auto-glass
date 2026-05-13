@@ -26,20 +26,56 @@
     });
   }
 
+  function getRelativePrefixToRoot() {
+    var path = (window.location.pathname || "").replace(/\\/g, "/");
+    var segments = path.split("/").filter(Boolean);
+
+    if (segments.length && /\.html?$/i.test(segments[segments.length - 1])) {
+      segments.pop();
+    }
+
+    return segments.length ? "../".repeat(segments.length) : "";
+  }
+
+  function isRootIndexPage() {
+    var path = (window.location.pathname || "").replace(/\\/g, "/");
+    var segments = path.split("/").filter(Boolean);
+
+    return !segments.length || (segments.length === 1 && /^index\.html?$/i.test(segments[0]));
+  }
+
+  function resolveNavHref(href, prefix, onRootIndex) {
+    if (!href) {
+      return href;
+    }
+
+    if (/^[a-z]+:/i.test(href) || href.indexOf("../") === 0 || href.indexOf("./") === 0) {
+      return href;
+    }
+
+    if (href.charAt(0) === "#") {
+      return onRootIndex ? href : prefix + "index.html" + href;
+    }
+
+    if (href.charAt(0) === "/") {
+      return prefix + href.replace(/^\/+/, "");
+    }
+
+    return prefix + href;
+  }
+
   function renderNav() {
     var navList = document.querySelector("[data-nav-list]");
     if (!navList || !Array.isArray(config.navigation)) {
       return;
     }
 
-    var isServicePage = window.location.pathname.includes('/services/');
+    var prefix = getRelativePrefixToRoot();
+    var onRootIndex = isRootIndexPage();
 
     navList.innerHTML = config.navigation
       .map(function (item) {
-        var href = item.href;
-        if (isServicePage && href.charAt(0) === '#') {
-          href = '../index.html' + href;
-        }
+        var href = resolveNavHref(item.href, prefix, onRootIndex);
         return '<li><a href="' + href + '">' + item.label + "</a></li>";
       })
       .join("");
@@ -176,17 +212,6 @@
     var container = document.querySelector("[data-footer-links]");
     if (!container || !Array.isArray(config.footerLinks)) {
       return;
-    }
-
-    function getRelativePrefixToRoot() {
-      var path = (window.location.pathname || "").replace(/\\/g, "/");
-      var segments = path.split("/").filter(Boolean);
-
-      if (segments.length && /\.html?$/i.test(segments[segments.length - 1])) {
-        segments.pop();
-      }
-
-      return segments.length ? "../".repeat(segments.length) : "";
     }
 
     function resolveFooterHref(href, prefix) {

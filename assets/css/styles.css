@@ -614,3 +614,14 @@ h3 {
   flex-wrap: wrap;
   margin-top: 1.5rem;
 }
+
+.resources-page li > a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 160ms ease;
+}
+
+.resources-page li > a:hover,
+.resources-page li > a:focus-visible {
+  color: var(--accent-deep);
+}

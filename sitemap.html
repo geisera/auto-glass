@@ -1,28 +1,110 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" id="top">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Sitemap | Keystone Auto Glass</title>
-    <meta name="description" content="Sitemap for Keystone Auto Glass.">
+    <title>HTML Sitemap | Keystone Auto Glass</title>
+    <meta name="description" content="Browse the HTML sitemap for Keystone Auto Glass to find key service pages, service area pages, contact information, and helpful resources.">
     <link rel="stylesheet" href="assets/css/styles.css">
     <script src="assets/js/site-config.js" defer></script>
     <script src="assets/js/site-loader.js" defer></script>
   </head>
   <body>
-    <main class="section">
-      <div class="container">
-        <p class="eyebrow">Sitemap</p>
-        <h1>Site Pages</h1>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="thank-you.html">Thank You</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
-          <li><a href="terms-of-service.html">Terms Of Service</a></li>
-        </ul>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html#top" class="brand" aria-label="Go to homepage">
+          <span class="brand-kicker">KEYSTONE</span>
+          <span class="brand-main">AUTO GLASS</span>
+        </a>
+        <nav aria-label="Primary">
+          <ul class="nav-list" data-nav-list></ul>
+        </nav>
+        <a class="button button-ghost desktop-call" data-phone-link data-track-click="header-call">
+          <span data-config-text="contact.phoneDisplay"></span>
+        </a>
+      </div>
+    </header>
+
+    <main id="main-content" class="section">
+      <div class="container value-layout value-layout--single-column">
+        <div>
+          <p class="eyebrow">Sitemap</p>
+          <h1>HTML Sitemap</h1>
+          <p>
+            Use this page to browse the main sections of Keystone Auto Glass. For search engines, the XML sitemap is available at
+            <a href="sitemap.xml">sitemap.xml</a>.
+          </p>
+        </div>
+
+        <div class="card-grid card-grid--single-column">
+          <article class="info-card">
+            <h2>Main Pages</h2>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="terms-of-service.html">Terms Of Service</a></li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <h2>Service Pages</h2>
+            <ul>
+              <li><a href="services/windshield-replacement.html">Windshield Replacement</a></li>
+              <li><a href="services/chip-and-crack-repair.html">Chip And Crack Repair</a></li>
+              <li><a href="services/side-and-rear-glass.html">Side And Rear Glass</a></li>
+              <li><a href="services/adas-calibration-support.html">ADAS Calibration Support</a></li>
+              <li><a href="services/mobile-service.html">Mobile Service</a></li>
+              <li><a href="services/insurance-claim-help.html">Insurance Claim Help</a></li>
+            </ul>
+          </article>
+
+          <article class="info-card">
+            <h2>Service Area Pages</h2>
+            <ul>
+              <li><a href="camp-hill/">Camp Hill</a></li>
+              <li><a href="carlisle/">Carlisle</a></li>
+              <li><a href="gettysburg/">Gettysburg</a></li>
+              <li><a href="hanover/">Hanover</a></li>
+              <li><a href="harrisburg/">Harrisburg</a></li>
+              <li><a href="hershey/">Hershey</a></li>
+              <li><a href="lancaster/">Lancaster</a></li>
+              <li><a href="lebanon/">Lebanon</a></li>
+              <li><a href="mechanicsburg/">Mechanicsburg</a></li>
+              <li><a href="york/">York</a></li>
+            </ul>
+          </article>
+        </div>
       </div>
     </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h2 data-config-text="business.name"></h2>
+          <p data-config-text="business.tagline"></p>
+          <p>
+            <a data-phone-link data-track-click="footer-phone"><span data-config-text="contact.phoneDisplay"></span></a>
+            <br>
+            <a data-email-link data-track-click="footer-email"><span data-config-text="contact.email"></span></a>
+            <br>
+            <span data-config-text="contact.hours"></span>
+          </p>
+        </div>
+        <div>
+          <h3>Additional Links</h3>
+          <ul class="footer-links" data-footer-links></ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>Copyright <span data-current-year></span> <span data-config-text="business.name"></span>. All rights reserved.</p>
+        <a href="#top">Back to top</a>
+      </div>
+    </footer>
+
+    <a class="mobile-call" data-phone-link data-track-click="sticky-call">Call Now</a>
   </body>
 </html>
