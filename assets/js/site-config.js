@@ -2,9 +2,9 @@ window.SITE_CONFIG = {
   business: {
     name: "Keystone Auto Glass",
     tagline: "Clear glass. Safe drive. Fast local response.",
-    headline: "Auto glass service that gets you back on the road fast.",
+    headline: "Auto glass service for Harrisburg, Pennsylvania drivers.",
     subheadline:
-      "From rock-chip repairs to full windshield replacement, our South Central Pennsylvania team handles the job with mobile convenience and no runaround.",
+      "From rock-chip repairs to full windshield replacement, our Harrisburg team handles the job with mobile convenience and no runaround.",
     badgeText: "Fast, free quote"
   },
   contact: {
@@ -55,7 +55,7 @@ window.SITE_CONFIG = {
       title: "Mobile Service",
       href: "services/mobile-service.html",
       description:
-        "Home, office, or fleet location appointments across South Central Pennsylvania for minimal downtime."
+        "Home, office, or fleet location appointments across Harrisburg and nearby communities for minimal downtime."
     },
     {
       title: "Insurance Claim Help",
@@ -75,7 +75,7 @@ window.SITE_CONFIG = {
     },
     {
       title: "Local service team",
-      description: "We work South Central PA daily and know local routes, weather, and scheduling realities."
+      description: "We work Harrisburg daily and know local routes, weather, and scheduling realities."
     }
   ],
   valuePoints: [
@@ -96,7 +96,7 @@ window.SITE_CONFIG = {
     }
   ],
   serviceArea: {
-    regionLabel: "South Central Pennsylvania",
+    regionLabel: "Harrisburg, Pennsylvania",
     cities: [
       "Harrisburg",
       "Mechanicsburg",
@@ -142,7 +142,7 @@ window.SITE_CONFIG = {
       items: [
         {
           q: "Do you come to my home or work?",
-          a: "Yes, mobile service is available across our South Central Pennsylvania coverage area."
+          a: "Yes, mobile service is available across our Harrisburg coverage area."
         },
         {
           q: "Can weather affect mobile appointments?",
